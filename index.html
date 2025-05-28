@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Clasificador de Flores</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.18.0/dist/tf.min.js"></script>
+    <style>
+        body { font-family: sans-serif; margin: 20px; display: flex; flex-direction: column; align-items: center; }
+        #preview { max-width: 300px; max-height: 300px; margin-top: 10px; margin-bottom:10px; border: 1px solid #ccc; display: block;}
+        #resultado { font-weight: bold; margin-top: 15px; font-size: 1.2em; }
+        button { padding: 10px 15px; font-size: 1em; cursor: pointer; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Clasificador de Flores</h1>
+    <p>Sube una imagen de una flor para clasificarla.</p>
+    <input type="file" id="selectorImagen" accept="image/*" onchange="mostrarPreview(event)">
+    <img id="preview" src="#" alt="Vista previa de la imagen"/>
+    <button onclick="predecirFlor()">Clasificar Flor</button>
+    <p id="resultado"></p>
+
+    <script src="app.js"></script>
+</body>
+</html>
